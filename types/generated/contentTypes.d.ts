@@ -477,6 +477,11 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    'strapi-import-export': {
+      idField: 'id';
+    };
+  };
   attributes: {
     application: Schema.Attribute.Text;
     clinicalBenefits: Schema.Attribute.JSON;

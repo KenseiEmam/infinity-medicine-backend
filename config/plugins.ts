@@ -9,5 +9,18 @@ module.exports = ({ env }) => ({
         api_secret: env('CLOUDINARY_SECRET'),
       },
     },
+    
+  },
+  "strapi-csv-import-export": {
+          config: {
+            authorizedExports: ["api::machine.machine"],
+            authorizedImports: ["api::machine.machine"]
+  }
+},
+  'strapi-import-export': {
+    enabled: true,
+    config: {
+      // See `Config` section.
+    },
   },
 });
