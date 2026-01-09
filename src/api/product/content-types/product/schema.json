@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "equipment",
+        "consumable",
+        "tool"
+      ]
+    },
+    "department": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "ophthalmology",
+        "dermatology",
+        "general-med"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "technicalSpecifications": {
+      "type": "json"
+    },
+    "keyFeatures": {
+      "type": "json"
+    },
+    "keyIngredients": {
+      "type": "json"
+    },
+    "treatmentIndications": {
+      "type": "json"
+    },
+    "clinicalBenefits": {
+      "type": "json"
+    },
+    "application": {
+      "type": "text"
+    },
+    "short_description": {
+      "type": "string"
+    }
+  }
+}
