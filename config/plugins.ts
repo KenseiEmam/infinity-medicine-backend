@@ -11,12 +11,6 @@ module.exports = ({ env }) => ({
     },
     
   },
-  "strapi-csv-import-export": {
-          config: {
-            authorizedExports: ["api::machine.machine"],
-            authorizedImports: ["api::machine.machine"]
-  }
-},
   'strapi-import-export': {
     enabled: true,
     config: {
