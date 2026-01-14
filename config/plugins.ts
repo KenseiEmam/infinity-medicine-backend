@@ -20,7 +20,7 @@ module.exports = ({ env }) => ({
   'strapi-import-export': {
     enabled: true,
     config: {
-      serverPublicHostname: 'https://infinity-medicine-backend.onrender.com',
+      serverPublicHostname:  env('PUBLIC_URL', 'https://infinity-medicine-backend.onrender.com'),
     },
   },
 });
