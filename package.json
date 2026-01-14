@@ -17,6 +17,7 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.33.1",
     "@strapi/plugin-users-permissions": "5.33.1",
+    "@strapi/provider-email-nodemailer": "^5.33.3",
     "@strapi/provider-upload-cloudinary": "^5.33.2",
     "@strapi/strapi": "5.33.1",
     "better-sqlite3": "12.4.1",
@@ -41,5 +42,8 @@
   "strapi": {
     "uuid": "f13e48b6-44fb-4362-9a5e-7f2fdcbef9c0",
     "installId": "3bbf9c14c3f880f053de1e64f0ee2672408f945518ac7c82ecca7402372e1942"
+  },
+  "optionalDependencies": {
+    "@esbuild/win32-x64": "^0.27.2"
   }
 }

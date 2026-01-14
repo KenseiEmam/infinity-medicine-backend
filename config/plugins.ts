@@ -23,4 +23,21 @@ module.exports = ({ env }) => ({
       serverPublicHostname:  env('PUBLIC_URL', 'https://infinity-medicine-backend.onrender.com'),
     },
   },
+    email: {
+    config: {
+      provider: 'nodemailer',
+      providerOptions: {
+        host: process.env.SMTP_HOST,
+        port: 587,
+        secure: false,
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
+        },
+      },
+      settings: {
+        defaultFrom: process.env.CONTACT_FROM_EMAIL,
+      },
+    },
+  },
 });
