@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-  // Upload plugin configuration
   upload: {
     config: {
       provider: 'cloudinary',
@@ -9,29 +8,34 @@ module.exports = ({ env }) => ({
         api_secret: env('CLOUDINARY_SECRET'),
       },
     },
-    
   },
+
   'strapi-import-export': {
     enabled: true,
     config: {
-      serverPublicHostname:  env('PUBLIC_URL', 'https://infinity-medicine-backend.onrender.com'),
+      serverPublicHostname: env(
+        'PUBLIC_URL',
+        'https://infinity-medicine-backend.onrender.com'
+      ),
     },
   },
+
   email: {
     config: {
       provider: 'nodemailer',
       providerOptions: {
-        host: process.env.SMTP_HOST,
-        port: 587,
+        host: env('SMTP_HOST'),
+        port: env.int('SMTP_PORT', 587),
         secure: false,
         auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
+          user: env('SMTP_USER'),
+          pass: env('SMTP_PASS'),
         },
       },
       settings: {
-        defaultFrom: process.env.CONTACT_FROM_EMAIL,
+        defaultFrom: env('CONTACT_FROM_EMAIL'),
+        defaultReplyTo: env('CONTACT_FROM_EMAIL'),
       },
     },
   },
-});
+})
