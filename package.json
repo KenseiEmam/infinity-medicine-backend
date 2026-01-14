@@ -15,16 +15,17 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.33.1",
-    "@strapi/plugin-users-permissions": "5.33.1",
-    "@strapi/provider-email-nodemailer": "^5.33.3",
+    "@strapi/plugin-cloud": "5.33.3",
+    "@strapi/plugin-users-permissions": "5.33.3",
+    "@strapi/provider-email-nodemailer": "^5.33.2",
     "@strapi/provider-upload-cloudinary": "^5.33.2",
-    "@strapi/strapi": "5.33.1",
+    "@strapi/strapi": "5.33.3",
     "better-sqlite3": "12.4.1",
     "pg": "^8.16.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-csv-import-export": "^0.0.6",
     "strapi-import-export": "^0.0.1",
     "styled-components": "^6.0.0"
   },
@@ -41,8 +42,5 @@
   "strapi": {
     "uuid": "f13e48b6-44fb-4362-9a5e-7f2fdcbef9c0",
     "installId": "3bbf9c14c3f880f053de1e64f0ee2672408f945518ac7c82ecca7402372e1942"
-  },
-  "optionalDependencies": {
-    "@esbuild/win32-x64": "^0.27.2"
   }
 }
